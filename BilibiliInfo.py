@@ -1,8 +1,12 @@
 import re
 import requests
 import json
-from utils.rtext import RAction, RText, RTextList
+from mcdreforged.api.rtext import RAction, RText, RTextList
 
+PLUGIN_METADATA = {
+	'id': 'BilibiliInfo',
+	'version': '1.0.0'
+}
 
 def simple_RText(message, text='', command='', action=RAction.run_command):
     Rtext = RText(message).set_hover_text(text).set_click_event(RAction.suggest_command, '')
